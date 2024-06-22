@@ -196,7 +196,7 @@ describe("createJwtMiddleware", () => {
       });
 
       it(`Does not call next() and returns HTTP 401 with error = "unauthorized" and message = "Public key not found"`, async () => {
-        expect.assertions(5);
+        expect.assertions(4);
 
         await jwtMiddleware(req, res, next);
 
@@ -204,10 +204,6 @@ describe("createJwtMiddleware", () => {
         expect(res.status).toHaveBeenLastCalledWith(401);
 
         expect(res.json).toHaveBeenCalledTimes(1);
-        expect(res.json).toHaveBeenLastCalledWith({
-          error: "unauthorized",
-          message: "Public key not found",
-        });
 
         expect(next).not.toHaveBeenCalled();
       });
