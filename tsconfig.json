@@ -3,6 +3,7 @@
     "jsx": "react",
     "lib": [
       "dom",
+      "esnext",
       "dom.iterable",
       "es2018",
       "es2019.array",
@@ -27,6 +28,7 @@
     "sourceMap": true,
     "inlineSources": true,
     "module": "ESNext",
+    "esModuleInterop": true,
     "noImplicitAny": false,
     "removeComments": true,
     "preserveConstEnums": true,
@@ -38,6 +40,7 @@
       "@canva/preview/*": ["./sdk/preview/*"]
     }
   },
+  "exclude": ["node_modules"],
   "include": [
     "./src/**/*",
     "./scripts/**/*",
