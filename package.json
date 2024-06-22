@@ -12,7 +12,7 @@
     "format": "prettier '{examples,src,utils,scripts}/**/*.{css,ts,tsx}' --no-config --write",
     "format:check": "prettier '{examples,src,utils,scripts}/**/*.{css,ts,tsx}' --no-config --check --ignore-path",
     "format:file": "prettier $1 --no-config --write",
-    "test": "jest --no-cache",
+    "test": "yarn node --experimental-vm-modules $(yarn bin jest) --no-cache",
     "test:watch": "jest --no-cache --watch"
   },
   "keywords": [],

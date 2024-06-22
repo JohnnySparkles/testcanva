@@ -1,9 +1,10 @@
 import React from "react";
+import { Text } from "@canva/app-ui-kit";
 
 export const App = () => {
   return (
     <div>
-      <h1>It works!</h1>
+      <Text>It works!</Text>
     </div>
   );
 };
